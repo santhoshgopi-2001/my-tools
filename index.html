@@ -1,45 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Battery Backup Calculator</title>
+  <title>Santhosh's Tools</title>
   <style>
-    body { font-family: Arial; padding: 30px; background: #f4f4f4; }
-    h2 { color: #222; }
-    input, button { padding: 10px; margin: 10px 0; width: 100%; max-width: 300px; }
-    .result { margin-top: 20px; font-weight: bold; }
+    body { font-family: Arial, sans-serif; background: #f0f4f8; padding: 40px; text-align: center; }
+    h1 { color: #222; margin-bottom: 40px; }
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 15px;
+      font-size: 18px;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
-  <h2>Battery Backup Calculator</h2>
-
-  <label>Load Power (Watts):</label><br>
-  <input type="number" id="load" placeholder="e.g., 100"><br>
-
-  <label>Battery Voltage (Volts):</label><br>
-  <input type="number" id="voltage" placeholder="e.g., 12"><br>
-
-  <label>Battery Capacity (Ah):</label><br>
-  <input type="number" id="capacity" placeholder="e.g., 100"><br>
-
-  <button onclick="calculate()">Calculate</button>
-
-  <div class="result" id="result"></div>
-
-  <script>
-    function calculate() {
-      const load = parseFloat(document.getElementById('load').value);
-      const voltage = parseFloat(document.getElementById('voltage').value);
-      const capacity = parseFloat(document.getElementById('capacity').value);
-
-      if (load && voltage && capacity) {
-        const backupTime = (voltage * capacity) / load;
-        document.getElementById('result').innerText = 
-          `Estimated Backup Time: ${backupTime.toFixed(2)} hours`;
-      } else {
-        document.getElementById('result').innerText = 
-          'Please fill all values correctly.';
-      }
-    }
-  </script>
+  <h1>Welcome to Santhosh's Electrical Tools</h1>
+  
+  <a href="battery.html" class="button">Battery Backup Calculator</a>
+  <a href="lighting.html" class="button">Lighting Load Calculator</a>
+  <a href="cable.html" class="button">Cable Size Calculator</a>
+  <!-- Add more tools here -->
 </body>
 </html>
